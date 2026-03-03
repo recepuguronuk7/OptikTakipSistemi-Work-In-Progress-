@@ -1,0 +1,13 @@
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+*.dbmdl
+*.jfm
+
+
+database/*.bak
+*.mdf
+*.ldf
+*.ndf

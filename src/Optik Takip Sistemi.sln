@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36804.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optik Takip Sistemi", "Optik Takip Sistemi.csproj", "{F91225A3-E7F0-41A1-95D7-74379C31214B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F91225A3-E7F0-41A1-95D7-74379C31214B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F91225A3-E7F0-41A1-95D7-74379C31214B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F91225A3-E7F0-41A1-95D7-74379C31214B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F91225A3-E7F0-41A1-95D7-74379C31214B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {243B3599-188B-44ED-80FD-B7A8AE81ABD0}
+	EndGlobalSection
+EndGlobal

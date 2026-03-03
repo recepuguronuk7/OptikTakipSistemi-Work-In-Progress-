@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RestSharp.Serializers.NewtonsoftJson</name>
+    </assembly>
+    <members>
+        <member name="F:RestSharp.Serializers.NewtonsoftJson.JsonNetSerializer.DefaultSettings">
+            <summary>
+            Default serialization settings:
+            - Camel-case contract resolver
+            - Type name handling set to none
+            - Null values ignored
+            - Non-indented formatting
+            - Allow using non-public constructors
+            </summary>
+        </member>
+        <member name="M:RestSharp.Serializers.NewtonsoftJson.JsonNetSerializer.#ctor">
+            <summary>
+            Create the new serializer that uses Json.Net with default settings
+            </summary>
+        </member>
+        <member name="M:RestSharp.Serializers.NewtonsoftJson.JsonNetSerializer.#ctor(Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Create the new serializer that uses Json.Net with custom settings
+            </summary>
+            <param name="settings">Json.Net serializer settings</param>
+        </member>
+        <member name="M:RestSharp.Serializers.NewtonsoftJson.RestClientExtensions.UseNewtonsoftJson(RestSharp.Serializers.SerializerConfig)">
+            <inheritdoc cref="M:RestSharp.Serializers.NewtonsoftJson.RestClientExtensions.&lt;G&gt;$654B33401DA7D1015FF7FB0FC58BCBC0.UseNewtonsoftJson"/>
+        </member>
+        <member name="M:RestSharp.Serializers.NewtonsoftJson.RestClientExtensions.UseNewtonsoftJson(RestSharp.Serializers.SerializerConfig,Newtonsoft.Json.JsonSerializerSettings)">
+            <inheritdoc cref="M:RestSharp.Serializers.NewtonsoftJson.RestClientExtensions.&lt;G&gt;$654B33401DA7D1015FF7FB0FC58BCBC0.UseNewtonsoftJson(Newtonsoft.Json.JsonSerializerSettings)"/>
+        </member>
+        <member name="T:RestSharp.Serializers.NewtonsoftJson.RestClientExtensions.&lt;G&gt;$654B33401DA7D1015FF7FB0FC58BCBC0.&lt;M&gt;$B97E7FC2B13A9FEC5F732274A1864225">
+            <param name="config"></param>
+        </member>
+        <member name="M:RestSharp.Serializers.NewtonsoftJson.RestClientExtensions.&lt;G&gt;$654B33401DA7D1015FF7FB0FC58BCBC0.UseNewtonsoftJson">
+            <summary>
+            Use Newtonsoft.Json serializer with default settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestSharp.Serializers.NewtonsoftJson.RestClientExtensions.&lt;G&gt;$654B33401DA7D1015FF7FB0FC58BCBC0.UseNewtonsoftJson(Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Use Newtonsoft.Json serializer with custom settings
+            </summary>
+            <param name="settings">Newtonsoft.Json serializer settings</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

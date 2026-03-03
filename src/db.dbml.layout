@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 23.25, 8.5" name="db">
+  <DataContextMoniker Name="/dbDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a3028099-cad6-4e16-b116-7e7fc28d1ef7" absoluteBounds="0.5, 4.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/dbDataContext/Urunler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b0ae8fc-21be-4897-a8eb-4545ef0e579b" absoluteBounds="0.51499999999999968, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c7afa9e5-aee3-4e73-9233-63495470d4e5" absoluteBounds="3.25, 0.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbDataContext/Receteler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f058fa71-1109-445d-964e-9a7ca3407baa" absoluteBounds="3.2649999999999997, 0.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="106b4510-14b0-49f7-b5d9-874d22ed0bb1" absoluteBounds="0.5, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/dbDataContext/Musteriler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be11b1b9-57e1-42fc-a6a6-160dbd6b141b" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 1.48159912109375); (3.25 : 1.48159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbDataContext/Musteriler/Musteriler_Receteler" />
+      <nodes>
+        <classShapeMoniker Id="106b4510-14b0-49f7-b5d9-874d22ed0bb1" />
+        <classShapeMoniker Id="c7afa9e5-aee3-4e73-9233-63495470d4e5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4c7dad04-3b0a-447d-a9f0-889002b2b2ba" absoluteBounds="8.125, 0.5, 2, 6.3861311848958326">
+      <DataClassMoniker Name="/dbDataContext/GozlukRecetesi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c26f8d22-4eb4-47c4-9e1e-5fb5f216af53" absoluteBounds="8.14, 0.96, 1.9700000000000002, 5.826131184895833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 1.57774983723958); (5.625 : 1.57774983723958); (5.625 : 7.13613118489583); (9.125 : 7.13613118489583); (9.125 : 6.88613118489583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbDataContext/Receteler/Receteler_GozlukRecetesi" />
+      <nodes>
+        <classShapeMoniker Id="c7afa9e5-aee3-4e73-9233-63495470d4e5" />
+        <classShapeMoniker Id="4c7dad04-3b0a-447d-a9f0-889002b2b2ba" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b93f3f7e-fd34-4d46-9f80-b06f2916e30d" absoluteBounds="5.875, 0.5, 2, 5.6169254557291657">
+      <DataClassMoniker Name="/dbDataContext/LensRecetesi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d5e0acac-df57-4eb1-97f5-5525c7cbc5ff" absoluteBounds="5.89, 0.96, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 1.57774983723958); (5.875 : 1.57774983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbDataContext/Receteler/Receteler_LensRecetesi" />
+      <nodes>
+        <classShapeMoniker Id="c7afa9e5-aee3-4e73-9233-63495470d4e5" />
+        <classShapeMoniker Id="b93f3f7e-fd34-4d46-9f80-b06f2916e30d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f9eb6f95-419c-400c-8be7-304f78a64ec9" absoluteBounds="0.5, 2.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/dbDataContext/Hastaneler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f59f860-606b-4ca6-a380-07a9b3024ff1" absoluteBounds="0.51500000000000012, 3.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ed7c9b1f-bd80-4e93-b800-9c72d49ec5ca" absoluteBounds="14, 4.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/dbDataContext/KurumAdlari" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1caed528-31e8-4353-bdc4-7aec27548e9b" absoluteBounds="14.015, 5.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="205e4ff0-f19f-4fb2-9533-00809c36959b" absoluteBounds="14, 0.5, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/dbDataContext/UTSGelenBildirimler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5127c299-edcc-4cc4-ad4e-8c25fe73ade9" absoluteBounds="14.015, 0.96, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="66d90c46-2dd8-4f19-995c-af9e6f9e9dbd" absoluteBounds="16.375, 0.5, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/dbDataContext/UTSYeniAlmaBildirimleri" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d4b3b58e-d3b6-47a6-a450-0b5023d736b4" absoluteBounds="16.39, 0.96, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a1b87e48-90e9-4f47-b518-4cc6ed47eec7" absoluteBounds="3.25, 3.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbDataContext/ReceteSati" />
+      <nestedChildShapes>
+        <elementListCompartment Id="30fe2ea3-7860-4869-83f3-8045308bcea2" absoluteBounds="3.2649999999999997, 3.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.25 : 2.65549967447917); (4.25 : 3.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbDataContext/Receteler/Receteler_ReceteSati" />
+      <nodes>
+        <classShapeMoniker Id="c7afa9e5-aee3-4e73-9233-63495470d4e5" />
+        <classShapeMoniker Id="a1b87e48-90e9-4f47-b518-4cc6ed47eec7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6cbb6852-4218-4836-880f-a3a3dcb57aaf" absoluteBounds="11.75, 0.5, 2, 4.2708154296875">
+      <DataClassMoniker Name="/dbDataContext/DukkanStok" />
+      <nestedChildShapes>
+        <elementListCompartment Id="68e29933-f6d9-45d0-b6f4-a3b8670896c2" absoluteBounds="11.765, 0.96, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ef85abe9-e5b9-4d7d-9013-8c4b1f2a5e41" absoluteBounds="21, 0.5, 2, 3.1170068359375">
+      <DataClassMoniker Name="/dbDataContext/tumSatislarQuery" />
+      <nestedChildShapes>
+        <elementListCompartment Id="807479b4-f6b8-4b59-a2dd-957b40fb902a" absoluteBounds="21.015, 0.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f1444fd5-fa4c-4401-86b6-4bde168426d8" absoluteBounds="21, 3.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/dbDataContext/musteriyeAitTumReceteler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a934827-1dc1-45af-b3b2-6b2054151b93" absoluteBounds="21.015, 4.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

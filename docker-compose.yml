@@ -1,0 +1,16 @@
+services:
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: OptikDb
+    user: root
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Deneme1234.  
+    ports:
+      - "1433:1433"  
+    volumes:
+      - ./database:/var/opt/mssql/backup  
+      - sql-data:/var/opt/mssql/data      
+
+volumes:
+  sql-data:

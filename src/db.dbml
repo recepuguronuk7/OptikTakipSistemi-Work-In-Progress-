@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="OPTIKVT" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-EMHCIH4\SQLEXPRESS;Initial Catalog=OPTIKVT;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="Optik_Takip_Sistemi.Properties.Settings" SettingsPropertyName="OPTIKVTConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Urunler" Member="Urunlers">
+    <Type Name="Urunler">
+      <Column Name="TanimNo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TanimAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Receteler" Member="Recetelers">
+    <Type Name="Receteler">
+      <Column Name="ReceteId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MusteriId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Aciklama" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Hastane" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Doktor" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Kurum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Receteler_GozlukRecetesi" Member="GozlukRecetesi" ThisKey="ReceteId" OtherKey="ReceteId" Type="GozlukRecetesi" Cardinality="One" />
+      <Association Name="Receteler_LensRecetesi" Member="LensRecetesi" ThisKey="ReceteId" OtherKey="ReceteId" Type="LensRecetesi" Cardinality="One" />
+      <Association Name="Receteler_ReceteSati" Member="ReceteSatis" ThisKey="ReceteId" OtherKey="ReceteId" Type="ReceteSati" />
+      <Association Name="Musteriler_Receteler" Member="Musteriler" ThisKey="MusteriId" OtherKey="MusteriId" Type="Musteriler" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Musteriler" Member="Musterilers">
+    <Type Name="Musteriler">
+      <Column Name="MusteriId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Soyad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TCNo" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Column Name="TelNo" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Adres" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Musteriler_Receteler" Member="Recetelers" ThisKey="MusteriId" OtherKey="MusteriId" Type="Receteler" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GozlukRecetesi" Member="GozlukRecetesis">
+    <Type Name="GozlukRecetesi">
+      <Column Name="ReceteId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Y_Sag_SPH" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sag_CYL" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sag_AKS" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sag_PUP" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sag_YUK" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sag_PRIZM" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sag_TAB" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sol_SPH" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sol_CYL" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sol_AKS" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sol_PUP" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sol_YUK" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sol_PRIZM" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sol_TAB" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sag_SPH" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sag_CYL" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sag_AKS" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sag_PUP" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sag_YUK" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sag_PRIZM" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sag_TAB" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sol_SPH" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sol_CYL" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sol_AKS" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sol_PUP" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sol_YUK" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sol_PRIZM" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sol_TAB" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Association Name="Receteler_GozlukRecetesi" Member="Receteler" ThisKey="ReceteId" OtherKey="ReceteId" Type="Receteler" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LensRecetesi" Member="LensRecetesis">
+    <Type Name="LensRecetesi">
+      <Column Name="ReceteId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="U_Sag_BC" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sag_DIA" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sag_SPH" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sag_CYL" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sag_AKS" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sag_ADD" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sol_BC" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sol_DIA" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sol_SPH" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sol_CYL" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sol_AKS" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="U_Sol_ADD" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sag_BC" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sag_DIA" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sag_SPH" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sag_CYL" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sag_AKS" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sag_ADD" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sol_BC" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sol_DIA" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sol_SPH" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sol_CYL" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sol_AKS" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Column Name="Y_Sol_ADD" Type="System.Decimal" DbType="Decimal(5,2)" CanBeNull="true" />
+      <Association Name="Receteler_LensRecetesi" Member="Receteler" ThisKey="ReceteId" OtherKey="ReceteId" Type="Receteler" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Hastaneler" Member="Hastanelers">
+    <Type Name="Hastaneler">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HastaneAd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sehir" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ilce" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HastaneKodu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KurumAdlari" Member="KurumAdlaris">
+    <Type Name="KurumAdlari">
+      <Column Name="KurumNo" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="KurumAdi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SonGuncelleme" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UTSGelenBildirimler" Member="UTSGelenBildirimlers">
+    <Type Name="UTSGelenBildirimler">
+      <Column Name="BildirimId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Adet" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BelgeNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BildirenKurumNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="BildirimDurumu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BildirimTipi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DigerKurumNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="BarkodNo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="LotBatchNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OlusturulmaTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SeriNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UrunNo" Type="System.String" DbType="Char(14)" CanBeNull="true" />
+      <Column Name="UrunTanimi" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="KarsiBildirimId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VermeTarihi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GonderenKurumAdi" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="IslemDurumu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UTSYeniAlmaBildirimleri" Member="UTSYeniAlmaBildirimleris">
+    <Type Name="UTSYeniAlmaBildirimleri">
+      <Column Name="UrunNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GonderenKurumNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="BildirimId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LotBatchNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SeriNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UrunTanimi" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="GonderenKurumAdi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Adet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BelgeNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BildirimDurumu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BildirimZamani" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VermeTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UniqueNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IslemDurumu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReceteSatis" Member="ReceteSatis">
+    <Type Name="ReceteSati">
+      <Column Name="SatisId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReceteId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UrunBarkodNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UrunSatisFiyati" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Association Name="Receteler_ReceteSati" Member="Receteler" ThisKey="ReceteId" OtherKey="ReceteId" Type="Receteler" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DukkanStok" Member="DukkanStoks">
+    <Type Name="DukkanStok">
+      <Column Name="UrunNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GonderenKurumNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="BildirimId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="LotBatchNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SeriNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UrunTanimi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="GonderenKurumAdi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Adet" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BelgeNo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BildirimDurumu" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BildirimZamani" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VermeTarihi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BarkodNo" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Durum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Maliyet" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="StokEklenmeTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SatisTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VermeBildirimiDurum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tumSatislarQuery" Member="tumSatislarQueries">
+    <Type Name="tumSatislarQuery">
+      <Column Name="SatisBenzersizId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MusteriId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Soyad" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TCNo" Type="System.String" DbType="Char(11) NOT NULL" CanBeNull="false" />
+      <Column Name="UrunTanimi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="GonderenKurumAdi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Adet" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BarkodNo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SatisTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Maliyet" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="UrunSatisFiyati" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.musteriyeAitTumReceteler" Member="musteriyeAitTumRecetelers">
+    <Type Name="musteriyeAitTumReceteler">
+      <Column Name="urunTanimi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="maliyet" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="satisTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="satisFiyati" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="MusteriId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
