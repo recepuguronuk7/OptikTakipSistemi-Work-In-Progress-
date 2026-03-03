@@ -11,17 +11,17 @@ Bu proje, optik mağazaları için geliştirilmiş kapsamlı bir müşteri, reç
 ## Ekran Görüntüleri ve Şema
 
 ### Veritabanı Mimarisi (ER Diyagramı)
-![Veritabanı Şeması](images/sema.jpeg)
+![Veritabanı Şeması](images/sema.jpg)
 
 ### Uygulama Arayüzü
 *Aşağıdaki görseller uygulamanın temel modüllerini göstermektedir:*
 
-![Satış Ekranı](images/satisyap.jpeg)
-![Stok Ekleme Ekranı](images/stokekle.jpeg)
-![Stokta Bulunan Ürünler](images/stok.jpeg)
-![UTS Ürün Alma-Kabul Ekranı](images/utsalma.jpeg)
-![Günlük Yapılan Satışlar Ekranı](images/gunluksatis.jpeg)
-![Yapılmış Tüm Satışlar Ekranı](images/tumsatislar.jpeg)
+![Satış Ekranı](images/satisyap.jpg)
+![Stok Ekleme Ekranı](images/stokekle.jpg)
+![Stokta Bulunan Ürünler](images/stok.jpg)
+![UTS Ürün Alma-Kabul Ekranı](images/utsalma.jpg)
+![Günlük Yapılan Satışlar Ekranı](images/gunluksatis.jpg)
+![Yapılmış Tüm Satışlar Ekranı](images/tumsatislar.jpg)
 
 ## Kurulum ve Çalıştırma (Geliştiriciler İçin)
 
